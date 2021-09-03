@@ -1,0 +1,160 @@
+{% extends "blog/base.html" %}
+
+
+{% block content %}
+    {% load custom_filter %}
+    {% load myTags %}
+
+<div class="container">
+    <div class="row">
+        {% include "blog/Left.html" %}
+        <div class="col p-4" id="main" style="margin-right: 202px">
+            <p class="h3">Students</p>
+            <hr>
+            <div class="row align-items-center">
+                <table>
+                    <tbody>
+                    <tr  valign="top" height>
+                        <td>
+                            <div class="col-auto">
+                                <img src="/static/images/icon/tanmin.jpg" width="120px"  class="rounded-0" />
+                                <br><br>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col">
+
+                                <div >
+                                    <strong>谭敏</strong>
+                                </div>
+                                <div>
+                                    研究生<br>
+                                    <a href="Mailto:1224836599@qq.com">1224836599@qq.com</a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+<!--下面是竖图组-->
+                    <tr  valign="top">
+                        <td>
+                            <div class="col-auto">
+                                <img src="/static/images/icon/sunyanling.jpg" width="120px"  class="rounded-0" />
+                                <br><br>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col">
+
+                                <div >
+                                    <strong>孙艳玲</strong>
+                                </div>
+                                <div>
+                                    研究生<br>
+                                    <a href="Mailto:sunyanling@buaa.edu.cn">sunyanling@buaa.edu.cn</a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr  valign="top">
+                        <td>
+                            <div class="col-auto">
+                                <img src="/static/images/icon/guoshuyu.jpg" width="120px"  class="rounded-0" />
+                             <br><br>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col">
+
+                                <div >
+                                    <strong>郭书宇</strong>
+                                </div>
+                                <div>
+                                    本科生<br>
+                                    <a href="Mailto:1628247817@qq.com">1628247817@qq.com</a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+
+                    {% for Student in PartStudents %}
+                    <tr  valign="top">
+                        <td>
+                            <div class="col-auto">
+                                <img src={{Student.0 | GetCompletePath:"/static/images/icon/"}} width="120px"  class="rounded-0" />
+                             <br><br>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col">
+
+                                <div >
+                                    <strong>{{Student.1|cut:"\""}}</strong>
+                                </div>
+                                <div>
+                                    {{Student.3|cut:"\""}}<br>
+                                    <a href={{Student.2}}>{{Student.2|cut:"\""}}</a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <!--横着的图-->
+                                        <tr  valign="top">
+                        <td>
+                            <div class="col-auto">
+                                <img src="/static/images/icon/guozheng.jpg" width="160px"  class="rounded-0" />
+                             <br><br>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col">
+
+                                <div >
+                                    <strong>郭峥</strong>
+                                </div>
+                                <div>
+                                    博士<br>
+                                    <a href="Mailto:guozheng1209@qq.com">guozheng1209@qq.com</a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    {% for Student in PartAcrossStudents %}
+                    <tr  valign="top">
+                        <td>
+                            <div class="col-auto">
+                                <img src={{Student.0 | GetCompletePath:"/static/images/icon/"}} width="160px"  class="rounded-0" />
+                             <br><br>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col">
+
+                                <div >
+                                    <strong>{{Student.1|cut:"\""}}</strong>
+                                </div>
+                                <div>
+                                    {{Student.3|cut:"\""}}<br>
+                                    <a href={{Student.2}}>{{Student.2|cut:"\""}}</a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

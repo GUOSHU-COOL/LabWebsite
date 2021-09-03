@@ -1,0 +1,80 @@
+{% extends "blog/base.html" %}
+
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row" style="margin-top: 40px;">
+        <div class="col-xs-3 ">
+    <ul class="nav nav-tabs" data-spy="affix" data-offset-top="125" style="height: 0px !important;border-top-width: 0px;padding-top: 10px;margin-top: 0px;">
+
+    </ul>
+    <li class="list-group-item" style="font-size:1.231rem;font-family:Georgia;color:white;background-color:rgb(145,187,225) !important;margin-top: 0px;">People
+
+    </li>
+    <li><a href="/chinese/People" class="list-group-item" onclick="changeToPeople();">Teacher
+        <span class="sr-only">(current)</span>
+    </a>
+    </li>
+
+    <li><a href="/chinese/People/Students" class="list-group-item">Students
+        <span class="sr-only">(current)</span>
+    </a>
+    </li>
+<!--    <li><a href="/chinese/People/Graduate Students" class="list-group-item">已毕业学生-->
+
+<!--    </a>-->
+<!--    </li>-->
+
+
+</div>
+
+<style>
+        ul.nav-tabs{
+        width: 200px;
+        margin-top: 20px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+        li::marker { color: white; font-weight:bold; }
+</style>
+        <div class="col p-3" id="main" style="margin-right: 202px;padding-top: 0px;margin-left: 25px;padding-left: 0px;padding-right: 0px;padding-bottom: 0px;">
+            <p class="h3" style="padding-left: 0px;margin-left: -16.5px;">Teacher</p>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <img src="/static/images/icon/dujing.jpg" class="rounded-0">
+                </div>
+                <div class="col">
+
+                    <h4>杜婧</h4>
+<!--                    <span class="small  float-left">01-02-2020</span>-->
+                    <div class="small text-uppercase">职称职务：长聘副教授／博导</div>
+                    <div class="small text-uppercase">办公地点：逸夫馆418 </div>
+                    <div class="small text-uppercase">E-mail：dujing@buaa.edu.cn</div>
+
+                </div>
+                <div class="w-100 my-3"></div>
+                <div>
+                    <h4>主要教育、科研简历</h4>
+                    <p>
+                        2000－2004  北京大学医学部、药学学士学位<br>
+                        2004－2009  清华大学生物科学与技术系／医学院、生物学博士学位<br>
+                        2009－2011  清华大学航天航空学院、博士后<br>
+                        2011－2013  清华大学航天航空学院、讲师<br>
+                        2013－2017    清华大学航天航空学院、副教授<br>
+                        2013－2014   东京大学（日本）、客座研究员<br>
+                        2017－至今  北京航空航天大学生物与医学工程学院、长聘副教授<br><br>
+                    </p><h5>研究方向</h5><br><br>
+
+                    1. 细胞和分子生物力学  2. 胚胎发育生物力学   3. 生物医学工程 4. 干细胞工程
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

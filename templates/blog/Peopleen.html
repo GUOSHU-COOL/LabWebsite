@@ -1,0 +1,46 @@
+{% extends "blog/baseen.html" %}
+
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% include "blog/Leften.html" %}
+        <div class="col p-4" id="main">
+            <p class="h3">Teacher</p>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <img src="/static/images/icon/dujing.jpg" class="rounded-0" />
+                </div>
+                <div class="col">
+
+                    <h4>DuJing</h4>
+<!--                    <span class="small  float-left">01-02-2020</span>-->
+                    <div class="small text-uppercase">The title：Associate Professor／Doctoral Supervisor</div>
+                    <div class="small text-uppercase">Office: YiFu building 418</div>
+                    <div class="small text-uppercase">E-mail：dujing@buaa.edu.cn</div>
+
+                </div>
+                <div class="w-100 my-3"></div>
+                <div>
+                    <h4>Education / Professional Experience</h4>
+                    <p >
+                        2000－2004:      B.E., School of Pharmaceutical Sciences, Peking University, China<br>
+                        2004－2009:      Ph.D., School of Medicine, Tsinghua University, China<br>
+                        2009－2011:      Postdoctoral RA, School of Aerospace, Tsinghua University, China<br>
+                        2011－2013:      Lecturer, School of Aerospace, Tsinghua University, China<br>
+                        2013－2017:      Vice Professor, School of Aerospace, Tsinghua University, China<br>
+                        2013－2014:      Visiting researcher, University of Tokyo, Japan<br>
+                        2007－Present:  Vice Professor, School of Biological Science and Medical Engineering, Beihang University, China<br><br>
+                        <h5>Research Interests</h5><br><br>
+
+                        1. Cellular and molecular biomechanics   2. Embryonic developmental biomechanics   3. Biomedical engineering 4. Stem cell engineering
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

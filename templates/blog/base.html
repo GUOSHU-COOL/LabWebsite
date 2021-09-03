@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static i18n %}
+<html>
+<head>
+
+    {% block title %}
+        <title>杜婧实验室</title>
+    {% endblock %}
+
+    {% block meta %}
+        <meta charset="UTF-8">
+        <meta name="keywords" content="杜婧课题组,生物力学,biomechanics,胚胎发育,命运分化,北航"/>
+        <meta name="description" content="杜婧课题组网站"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="GuoShuyu" content="">
+    {% endblock %}
+
+
+    {% block css %}
+    <!--CSS-->
+     <!-- Bootstrap core CSS -->
+    <link href="/static/startbootstrap-small-business-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/startbootstrap-small-business-master/css/small-business.css" rel="stylesheet">
+<!--    <link href="/static/css/loverstyle.css" rel="stylesheet">-->
+<!--    <link href="/static/css/publicationstyle.css" rel="stylesheet">-->
+    <link rel="shortcut icon" href="#"/>
+    {% endblock %}
+
+</head>
+
+<body style="
+    margin:0px;
+    padding:0;
+    border: white 0.001px solid" >
+<!--导航开始-->
+{% include "blog/header.html" %}
+<!--导航结束-->
+
+
+<!--主题框架开始-->
+
+{% block content %}
+
+{% endblock %}
+    <!--左侧结束-->
+
+
+
+
+<!---底部开始-->
+{% include "blog/footer.html" %}
+<!---返回顶部-->
+
+<!---END 底部开始-->
+
+{% block js %}
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/startbootstrap-small-business-master/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/startbootstrap-small-business-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/Nav.js"></script>
+  <script src="/static/js/main.js" defer></script>
+{% endblock %}
+<!--<script>-->
+<!--window.setTimeout(function () {-->
+<!--    location.href = "{{ redirect_url }}";-->
+<!--}, 5000)-->
+<!--// refresh/redirect after 5 seconds.-->
+<!--//调试前端时候用的不断刷新脚本-->
+<!--</script>-->
+
+</body>
+</html>
